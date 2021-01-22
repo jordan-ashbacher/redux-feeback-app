@@ -2,28 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
-import {createStore, combineReducers, applyMiddleware} from 'redux'
-import {Provider} from 'react-redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { Provider } from 'react-redux'
 import logger from 'redux-logger'
 
 // redux container to collect form data
 const feedbackReducer = (state = {
-    feeling: '',
-    understanding: '',
-    support: '',
+    feeling: 0,
+    understanding: 0,
+    support: 0,
     comments: ''
 }, action) => {
     switch (action.type) {
         case 'SET_FEELING':
-            return state.feeling = action.payload.feeling
+            return {...state, feeling: action.payload}
         case 'SET_UNDERSTANDING':
-            return action.payload;
+            return {...state, understanding: action.payload}
         case 'SET_SUPPORT':
-            return action.payload;
+            return {...state, support: action.payload}
         case 'SET_COMMENTS':
-            return action.payload;
+            return {...state, comments: action.payload}
         case 'RESET':
-            return state = {feeling: '', understanding: '', support: '', comments: ''}
+            return state = { feeling: '', understanding: '', support: '', comments: '' }
         default:
             return state;
     }
@@ -32,8 +32,12 @@ const feedbackReducer = (state = {
 const reduxStore = createStore(
     combineReducers({
         feedbackReducer
-    })
+    }), applyMiddleware(logger)
 )
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={reduxStore}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
 
