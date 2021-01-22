@@ -14,7 +14,7 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <Route path="/" component={Home} />
+        <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/feeling" component={FeelingForm} />
       </div>

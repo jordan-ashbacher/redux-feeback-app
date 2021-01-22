@@ -9,8 +9,7 @@ const Home = () => {
 
     return (
         <div className='titleContainer'>
-            <h1>How Zhu Doin'?</h1>
-            <button onClick={handleNext}>Tell Us How You Feel</button>
+            <button className='titleBtn' onClick={handleNext}>How Zhu Doin'?</button>
         </div>
         
     )
