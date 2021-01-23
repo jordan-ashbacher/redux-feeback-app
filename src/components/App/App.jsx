@@ -3,6 +3,8 @@ import axios from 'axios';
 import './App.css';
 import Home from '../Home/Home'
 import FeelingForm from '../FeelingForm/FeelingForm'
+import UnderstandingForm from '../UnderstandingForm/UnderstandingForm'
+import SupportForm from '../SupportForm/SupportForm'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/feeling" component={FeelingForm} />
+        <Route path="/understanding" component={UnderstandingForm} />
+        <Route path="/support" component={SupportForm} />
       </div>
     </Router>
   );
