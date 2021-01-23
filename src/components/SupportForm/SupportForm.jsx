@@ -33,6 +33,7 @@ const SupportForm = () => {
                 max="10" 
                 onChange={(e) => setSupport(e.target.value)}
                 value={support}
+                required
             />
             <button type="submit">NEXT</button>
         </form>

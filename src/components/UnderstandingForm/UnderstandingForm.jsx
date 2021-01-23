@@ -33,6 +33,7 @@ const UnderstandingForm = () => {
                 max="10" 
                 onChange={(e) => setUnderstanding(e.target.value)}
                 value={understanding}
+                required
             />
             <button type="submit">NEXT</button>
         </form>
