@@ -33,6 +33,7 @@ const FeelingForm = () => {
                 max="10" 
                 onChange={(e) => setFeeling(e.target.value)}
                 value={feeling}
+                required
             />
             <button type="submit">NEXT</button>
         </form>

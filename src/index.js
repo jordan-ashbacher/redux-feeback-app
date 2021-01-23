@@ -20,7 +20,7 @@ const feedbackReducer = (state = {
             return {...state, understanding: action.payload}
         case 'SET_SUPPORT':
             return {...state, support: action.payload}
-        case 'SET_COMMENTS':
+        case 'SET_COMMENT':
             return {...state, comments: action.payload}
         case 'RESET':
             return state = { feeling: '', understanding: '', support: '', comments: '' }
