@@ -5,6 +5,7 @@ import Home from '../Home/Home'
 import FeelingForm from '../FeelingForm/FeelingForm'
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm'
 import SupportForm from '../SupportForm/SupportForm'
+import CommentForm from '../CommentForm/CommentForm'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/feeling" component={FeelingForm} />
         <Route path="/understanding" component={UnderstandingForm} />
         <Route path="/support" component={SupportForm} />
+        <Route path="/comment" component={CommentForm} />
       </div>
     </Router>
   );
