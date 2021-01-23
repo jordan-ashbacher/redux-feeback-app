@@ -6,6 +6,7 @@ import FeelingForm from '../FeelingForm/FeelingForm'
 import UnderstandingForm from '../UnderstandingForm/UnderstandingForm'
 import SupportForm from '../SupportForm/SupportForm'
 import CommentForm from '../CommentForm/CommentForm'
+import ReviewPage from '../ReviewPage/ReviewPage'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/understanding" component={UnderstandingForm} />
         <Route path="/support" component={SupportForm} />
         <Route path="/comment" component={CommentForm} />
+        <Route path="/review" component={ReviewPage} />
       </div>
     </Router>
   );
