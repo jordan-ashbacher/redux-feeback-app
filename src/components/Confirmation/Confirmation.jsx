@@ -5,7 +5,7 @@ const Confirmation = () => {
     const history = useHistory()
     
     const handleClick = () => {
-        history.push('/home')
+        history.push('/feeling')
     }
 
     return (
