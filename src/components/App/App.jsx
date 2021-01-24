@@ -8,9 +8,24 @@ import SupportForm from '../SupportForm/SupportForm'
 import CommentForm from '../CommentForm/CommentForm'
 import ReviewPage from '../ReviewPage/ReviewPage'
 import Confirmation from '../Confirmation/Confirmation'
+import Admin from '../Admin/Admin'
 import { HashRouter as Router, Route, Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
 
 function App() {
+
+  useEffect(() => getFeedback(), [])
+  const dispatch = useDispatch()
+
+  const getFeedback = () => {
+    axios
+    .get('/feedback')
+    .then((response) => {
+      dispatch({ type: 'SET_FEEDBACK', payload: response.data})
+    })
+    .catch(err => console.log(err))
+  }
 
   return (
     <Router>
@@ -27,6 +42,7 @@ function App() {
         <Route path="/comment" component={CommentForm} />
         <Route path="/review" component={ReviewPage} />
         <Route path="/confirmation" component={Confirmation} />
+        <Route path="/admin" component={Admin} />
       </div>
     </Router>
   );

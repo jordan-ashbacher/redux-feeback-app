@@ -22,4 +22,18 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+    const queryText = `SELECT * FROM feedback ORDER BY date`
+
+    pool
+    .query(queryText)
+    .then((result) => {
+        res.send(result.rows)
+    })
+    .catch((err) => {
+        console.log(err)
+        res.sendStatus(500)
+    })
+})
+
 module.exports = router
