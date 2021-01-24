@@ -15,10 +15,10 @@ function App() {
   return (
     <Router>
       <div className='App'>
-        <header className='App-header'>
+        {/* <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
-        </header>
+        </header> */}
         <Route path="/" exact component={Home} />
         <Route path="/home" component={Home} />
         <Route path="/feeling" component={FeelingForm} />

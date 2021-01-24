@@ -1,4 +1,6 @@
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
+import Button from '@material-ui/core/Button'
+import '../Home/Home.css'
 
 const Home = () => {
 
@@ -8,10 +10,13 @@ const Home = () => {
     }
 
     return (
-        <div className='titleContainer'>
-            <button className='titleBtn' onClick={handleNext}>How Zhu Doin'?</button>
-        </div>
-        
+        <main>
+            <div className='titleContainer'>
+                <Button id="titleBtn" className='titleBtn' color="primary" variant="contained" fullWidth={true} onClick={handleNext}>How Zhu Doin'?</Button>
+            </div>
+
+        </main>
+
     )
 }
 

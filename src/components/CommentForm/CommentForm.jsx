@@ -1,6 +1,9 @@
-import {useState} from 'react'
-import {useDispatch} from 'react-redux'
-import {useHistory} from 'react-router-dom'
+import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { useHistory } from 'react-router-dom'
+import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
+import '../CommentForm/CommentForm.css'
 
 const CommentForm = () => {
 
@@ -22,20 +25,22 @@ const CommentForm = () => {
         history.push('/review')
     }
 
-    return(
-        <>
-        <h1>Any comments you want to leave?</h1>
-        <form onSubmit={handleSubmit}>
-            <input 
-                type="text" 
-                id="commentIn"
-                onChange={(e) => setComment(e.target.value)}
-                value={comment}
-            />
-            <button type="submit">NEXT</button>
-        </form>
-            
-        </>
+    return (
+        <div className="formContainer">
+            <h1>Any comments you want to leave?</h1>
+            <form onSubmit={handleSubmit}>
+                <TextField
+                    type="text"
+                    id="commentIn"
+                    label="Comment" 
+                    variant="outlined"
+                    onChange={(e) => setComment(e.target.value)}
+                    value={comment}
+                />
+                <Button id="nextBtn" variant="contained" type="submit">NEXT</Button>
+            </form>
+
+        </div>
     )
 }
 

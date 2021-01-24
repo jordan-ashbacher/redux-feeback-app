@@ -6,6 +6,7 @@ import Slider from '@material-ui/core/Slider'
 import SentimentVeryDissatisfied from '@material-ui/icons/SentimentVeryDissatisfied'
 import SentimentVerySatisfied from '@material-ui/icons/SentimentVerySatisfied'
 import '../SupportForm/SupportForm.css'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -67,7 +68,7 @@ const SupportForm = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button onClick={handleNext}>NEXT</button>
+            <Button id="nextBtn" variant="contained" onClick={handleNext}>NEXT</Button>
 
         </div>
     )

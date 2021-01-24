@@ -6,6 +6,7 @@ import Slider from '@material-ui/core/Slider'
 import SentimentVeryDissatisfied from '@material-ui/icons/SentimentVeryDissatisfied'
 import SentimentVerySatisfied from '@material-ui/icons/SentimentVerySatisfied'
 import '../UnderstandingForm/UnderstandingForm.css'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -38,6 +39,7 @@ const UnderstandingForm = () => {
 
     const handleNext = () => {
         console.log('in understanding handleSubmit')
+        
         const action = {
             type: 'SET_UNDERSTANDING',
             payload: Number(understanding)
@@ -67,7 +69,7 @@ const UnderstandingForm = () => {
                     onChange={handleChange}
                 />
             </div>
-            <button onClick={handleNext}>NEXT</button>
+            <Button id="nextBtn" variant="contained" onClick={handleNext}>NEXT</Button>
 
         </div>
     )

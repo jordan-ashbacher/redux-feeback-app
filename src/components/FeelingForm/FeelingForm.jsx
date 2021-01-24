@@ -6,6 +6,7 @@ import Slider from '@material-ui/core/Slider'
 import SentimentVeryDissatisfied from '@material-ui/icons/SentimentVeryDissatisfied'
 import SentimentVerySatisfied from '@material-ui/icons/SentimentVerySatisfied'
 import '../FeelingForm/FeelingForm.css'
+import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -68,9 +69,16 @@ const FeelingForm = () => {
                     marks={marks}
                     valueLabelDisplay="on"
                     onChange={handleChange}
+                    id="feelingSlider"
                 />
             </div>
-            <button onClick={handleNext}>NEXT</button>
+            <Button 
+                id="nextBtn" 
+                variant="contained" 
+                onClick={handleNext}
+            >
+                NEXT
+            </Button>
 
 
 
