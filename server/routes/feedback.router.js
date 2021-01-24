@@ -22,4 +22,33 @@ router.post('/', (req, res) => {
     })
 })
 
+router.get('/', (req, res) => {
+    const queryText = `SELECT * FROM feedback ORDER BY date`
+
+    pool
+    .query(queryText)
+    .then((result) => {
+        res.send(result.rows)
+    })
+    .catch((err) => {
+        console.log(err)
+        res.sendStatus(500)
+    })
+})
+
+router.delete('/:id', (req, res) => {
+    id = req.params.id
+    console.log(id)
+
+    const queryText = `DELETE FROM feedback WHERE id = $1`
+
+    pool
+    .query(queryText, [id])
+    .then(result => res.sendStatus(201))
+    .catch(err => {
+        console.log(err)
+        res.sendStatus(500)
+    })
+})
+
 module.exports = router

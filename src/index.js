@@ -29,9 +29,19 @@ const feedbackReducer = (state = {
     }
 }
 
+const adminReducer = (state = [], action) => {
+    switch(action.type) {
+        case 'SET_FEEDBACK':
+            return action.payload
+        default:
+            return state
+    }
+}
+
 const reduxStore = createStore(
     combineReducers({
-        feedbackReducer
+        feedbackReducer,
+        adminReducer
     }), applyMiddleware(logger)
 )
 
