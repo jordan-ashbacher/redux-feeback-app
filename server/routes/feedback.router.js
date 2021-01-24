@@ -36,4 +36,19 @@ router.get('/', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    id = req.params.id
+    console.log(id)
+
+    const queryText = `DELETE FROM feedback WHERE id = $1`
+
+    pool
+    .query(queryText, [id])
+    .then(result => res.sendStatus(201))
+    .catch(err => {
+        console.log(err)
+        res.sendStatus(500)
+    })
+})
+
 module.exports = router

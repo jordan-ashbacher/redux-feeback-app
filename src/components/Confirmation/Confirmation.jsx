@@ -1,5 +1,6 @@
 import { useHistory } from 'react-router-dom'
 import '../Confirmation/Confirmation.css'
+import Button from '@material-ui/core/Button'
 
 const Confirmation = () => {
 
@@ -12,7 +13,7 @@ const Confirmation = () => {
     return (
         <div className="container">
             <h1>Thank You!</h1>
-            <button onClick={handleClick}>LEAVE NEW FEEDBACK</button>
+            <Button variant="contained" onClick={handleClick}>LEAVE NEW FEEDBACK</Button>
         </div>
     )
 }

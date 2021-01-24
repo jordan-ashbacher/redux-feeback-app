@@ -32,7 +32,7 @@ const feedbackReducer = (state = {
 const adminReducer = (state = [], action) => {
     switch(action.type) {
         case 'SET_FEEDBACK':
-            return [action.payload]
+            return action.payload
         default:
             return state
     }

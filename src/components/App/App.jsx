@@ -15,17 +15,7 @@ import { useEffect } from 'react'
 
 function App() {
 
-  useEffect(() => getFeedback(), [])
-  const dispatch = useDispatch()
 
-  const getFeedback = () => {
-    axios
-    .get('/feedback')
-    .then((response) => {
-      dispatch({ type: 'SET_FEEDBACK', payload: response.data})
-    })
-    .catch(err => console.log(err))
-  }
 
   return (
     <Router>
