@@ -1,0 +1,18 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titleContainer {
+    margin: 0;
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+#titleBtn {
+    font-size: 20px;
+}

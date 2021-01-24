@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    /* flex-flow: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    /* for debugging */
+    border: 1px solid blue;
+}
+
+.reviewContainer {
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.editIconBtn {
+    display: inline;
+}
+
+#reviewSubmitBtn {
+    width: 200px;
+    height: 40px;
+}
+
+#reviewEditBtn {
+    width: 200px;
+    height: 40px;
+}
+
+#reviewCancelBtn {
+    width: 50%;
+}
+
